@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+.route-card {
+  border-spacing: 0;
+}
+
+.route-card td, .route-card th {
+  border: solid 1px black;
+}
+
+.route-card input {
+  width: 100%;
+}
+
+.route-card tbody tr:last-child input {
+  display: none;
+}
+
+.route-card tbody tr:last-child .grid-ref input {
+  display: inline;
+}
