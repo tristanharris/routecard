@@ -16,15 +16,15 @@
         </td>
       </tr>
       <tr>
-        <td>Date: <input></td>
-        <td colspan=2>DAY <input> OF <input></td>
+        <td>Date: <input type='date'></td>
+        <td colspan=2>DAY <input type='number' min=1> OF <input type='number' min=1></td>
         <td>OR</td>
         <td>ONE DAY</td>
-        <td colspan=2>Map(s) Used: <input></td>
+        <td colspan=2>Map(s) Used: <input type='text'></td>
       </tr>
       <tr>
-        <td colspan=5>Objective: <input></td>
-        <td colspan=2>Magnetic Variation: <input></td>
+        <td colspan=5>Objective: <input type='text'></td>
+        <td colspan=2>Magnetic Variation: <input type='number'></td>
       </tr>
     </table>
     <table class='route-card'>
@@ -41,11 +41,11 @@
       </thead>
       <tbody>
         <tr>
-          <td class='grid-ref'><input type='text' pattern='^[0-9]+\s+[0-9]+$' placeholder='Start'></td>
-          <td class='bearing'><input type='number'></td>
-          <td class='distance'><input type='number'></td>
-          <td class='height-gained'><input type='number'></td>
-          <td class='description'><input type='text'></td>
+          <td class='grid-ref'><input type='text' required pattern='^[0-9]{3}\s+[0-9]{3}$' placeholder='Start'></td>
+          <td class='bearing'><input type='number' min=0 max=360 required></td>
+          <td class='distance'><input type='number' min=0 required></td>
+          <td class='height-gained'><input type='number' min=0></td>
+          <td class='description'><input type='text' required></td>
           <td class='leg-time'><input type='text'></td>
           <td class='total-time'></td>
         </tr>
@@ -67,11 +67,11 @@
         </tr>
         <tr>
           <th>START TIME</th>
-          <td><input></td>
+          <td><input type='time'></td>
           <th colspan=2>FINISH TIME OR REACH CAMP SITE</th>
-          <td><input></td>
+          <td><input type='time'></td>
           <th>DARK AT</th>
-          <td><input></td>
+          <td><input type='time'></td>
         </tr>
       </tfoot>
     </table>
