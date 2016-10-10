@@ -4,6 +4,7 @@
 
 .route-card {
   border-spacing: 0;
+  width: 100%;
 
   td, th {
     border: solid 1px black;
@@ -11,6 +12,10 @@
 
   input {
     width: 100%;
+  }
+
+  .grid-ref, .bearing, .distance, .height-gained, .leg-time, .total-time {
+    width: 6em;
   }
 
   tbody tr:last-child td:not(.grid-ref) {

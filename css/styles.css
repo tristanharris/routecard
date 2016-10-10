@@ -2,11 +2,14 @@
   box-sizing: border-box; }
 
 .route-card {
-  border-spacing: 0; }
+  border-spacing: 0;
+  width: 100%; }
   .route-card td, .route-card th {
     border: solid 1px black; }
   .route-card input {
     width: 100%; }
+  .route-card .grid-ref, .route-card .bearing, .route-card .distance, .route-card .height-gained, .route-card .leg-time, .route-card .total-time {
+    width: 6em; }
   .route-card tbody tr:last-child td:not(.grid-ref) {
     background: grey; }
     .route-card tbody tr:last-child td:not(.grid-ref) input {
