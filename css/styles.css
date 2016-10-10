@@ -21,3 +21,7 @@
 .route-card tbody tr:last-child :not(.grid-ref) input {
   display: none;
 }
+
+.route-card tfoot th {
+  background: grey;
+}

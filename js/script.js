@@ -13,6 +13,33 @@
     new_row();
   });
 
+  $('.route-card tbody').on('keyup', '.distance input', function(e) {
+    var total = 0;
+    $('.route-card tbody .distance input').each(function() {
+      var distance = parseFloat($(this).val(), 10);
+      if (!isNaN(distance)) total += distance;
+    });
+    $('.route-card tfoot .distance').html(total);
+  });
+
+  $('.route-card tbody').on('keyup', '.height-gained input', function(e) {
+    var total = 0;
+    $('.route-card tbody .height-gained input').each(function() {
+      var height = parseFloat($(this).val(), 10);
+      if (!isNaN(height)) total += height;
+    });
+    $('.route-card tfoot .height-gained').html(total);
+  });
+
+  $('.route-card tbody').on('keyup', '.leg-time input', function(e) {
+    var total = 0;
+    $('.route-card tbody .leg-time input').each(function() {
+      var time = parseFloat($(this).val(), 10);
+      if (!isNaN(time)) total += time;
+    });
+    $('.route-card tfoot .leg-time').html(total);
+  });
+
   new_row();
 
 })(jQuery);
