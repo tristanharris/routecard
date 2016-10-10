@@ -10,6 +10,25 @@
     $('.route-card tbody').append(row.clone());
   }
 
+  function to_minutes(text) {
+    var parts = text.split(':');
+    if (parts.length == 1) {
+      return parseInt(text, 10);
+    } else {
+      return parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10);
+    }
+  }
+
+  function to_time(minutes) {
+    if (isNaN(minutes)) {
+      return '';
+    } else if (minutes < 60) {
+      return "" + minutes;
+    } else {
+      return "" + parseInt(minutes / 60, 10) + ':' + ((minutes % 60) < 10 ? '0' : '') + (minutes % 60)
+    }
+  }
+
   $('.route-card').on('keyup', 'tr:last-child .grid-ref input', function(e) {
     if (this.validity.valid) new_row();
   });
@@ -35,15 +54,15 @@
   $('.route-card tbody').on('keyup', '.leg-time input', function(e) {
     var total = 0;
     $('.route-card tbody .leg-time input:not(:hidden)').each(function() {
-      var time = parseFloat($(this).val(), 10);
-      if (!isNaN(time)) total += time;
-      $(this).closest('tr').find('.total-time').html(total);
+      var time = to_minutes($(this).val());
+      total += time;
+      $(this).closest('tr').find('.total-time').html(to_time(total));
     });
-    $('.route-card tfoot .leg-time').html(total);
-    $('.route-card tfoot .total-time').html(total);
+    $('.route-card tfoot .leg-time').html(to_time(total));
+    $('.route-card tfoot .total-time').html(to_time(total));
     var plusten = parseInt(total/60);
-    $('.route-card tfoot .plus-ten').html(plusten * 10);
-    $('.route-card tfoot .full-total-time').html(total + plusten * 10);
+    $('.route-card tfoot .plus-ten').html(to_time(plusten * 10));
+    $('.route-card tfoot .full-total-time').html(to_time(total + plusten * 10));
   });
 
   new_row();
