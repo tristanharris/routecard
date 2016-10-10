@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+td input {
+  width: 100%;
+}
+
+.days input {
+  width: 6em;
+}
+
 .route-card {
   border-spacing: 0;
   width: 100%;

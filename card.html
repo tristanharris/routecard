@@ -7,8 +7,8 @@
   <body>
     <table>
       <tr>
-        <th colspan=3><h1>Route Plan</h1></th>
-        <td colspan=4>
+        <th colspan=2><h1>Route Plan</h1></th>
+        <td colspan=6>
           <ul>
             <li>To be completed in accordance with Policy, Organisation and Rules.</li>
             <li>Take a copy with you and leave a copy with a responsible local person - cancel on return.</li>
@@ -16,15 +16,20 @@
         </td>
       </tr>
       <tr>
-        <td>Date: <input type='date' name='card[date]'></td>
-        <td colspan=2>Day <input type='number' name='card[day]' min=1> of <input type='number' name='card[total_days]' min=1></td>
-        <td>Or</td>
+        <th>Date:</th>
+        <td><input type='date' name='card[date]'></td>
+        <th>Day</th>
+        <td class='days'><input type='number' name='card[day]' min=1> of <input type='number' name='card[total_days]' min=1></td>
+        <th>Or</th>
         <td>One day</td>
-        <td colspan=2>Map(s) Used: <input type='text' name='card[maps]'></td>
+        <th>Map(s) Used:</th>
+        <td><input type='text' name='card[maps]'></td>
       </tr>
       <tr>
-        <td colspan=5>Objective: <input type='text' name='card[objective]'></td>
-        <td colspan=2>Magnetic Variation: <input type='number' name='card[mag_variation]'></td>
+        <th>Objective:</th>
+        <td colspan=5><input type='text' name='card[objective]'></td>
+        <th>Magnetic Variation:</th>
+        <td><input type='number' name='card[mag_variation]'></td>
       </tr>
     </table>
     <table class='route-card'>
