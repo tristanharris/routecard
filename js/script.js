@@ -10,8 +10,8 @@
     $('.route-card tbody').append(row.clone());
   }
 
-  $('.route-card').on('keydown', 'tr:last-child .grid-ref input', function(e) {
-    new_row();
+  $('.route-card').on('keyup', 'tr:last-child .grid-ref input', function(e) {
+    if (this.validity.valid) new_row();
   });
 
   $('.route-card tbody').on('keyup', '.distance input', function(e) {
