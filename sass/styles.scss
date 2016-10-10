@@ -1,22 +1,27 @@
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 .route-card {
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 .route-card td, .route-card th {
-  border: solid 1px black; }
+  border: solid 1px black;
+}
 
 .route-card input {
-  width: 100%; }
+  width: 100%;
+}
 
 .route-card tbody tr:last-child td:not(.grid-ref) {
-  background: grey; }
+  background: grey;
+}
 
 .route-card tbody tr:last-child :not(.grid-ref) input {
-  display: none; }
+  display: none;
+}
 
 .route-card tfoot th {
-  background: grey; }
-
-/*# sourceMappingURL=styles.css.map */
+  background: grey;
+}
