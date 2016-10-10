@@ -5,8 +5,28 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen,print" />
   </head>
   <body>
-    <h1>Route Card</h1>
-
+    <table>
+      <tr>
+        <th colspan=3><h1>Route Plan</h1></th>
+        <td colspan=4>
+          <ul>
+            <li>To be completed in accordance with Policy, Organisation and Rules.</li>
+            <li>Take a copy with you and leave a copy with a responsible local person - cancel on return.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Date: <input></td>
+        <td colspan=2>DAY <input> OF <input></td>
+        <td>OR</td>
+        <td>ONE DAY</td>
+        <td colspan=2>Map(s) Used: <input></td>
+      </tr>
+      <tr>
+        <td colspan=5>Objective: <input></td>
+        <td colspan=2>Magnetic Variation: <input></td>
+      </tr>
+    </table>
     <table class='route-card'>
       <thead>
         <tr>
@@ -38,6 +58,20 @@
           <th></th>
           <td class='leg-time'></td>
           <td class='total-time'></td>
+        </tr>
+        <tr>
+          <th colspan=3>Add 10 minutes per hour for safety</th>
+          <td class='plus-ten'></td>
+          <th colspan=2>...... thus estimated total journey time</th>
+          <td class='full-total-time'></td>
+        </tr>
+        <tr>
+          <th>START TIME</th>
+          <td><input></td>
+          <th colspan=2>FINISH TIME OR REACH CAMP SITE</th>
+          <td><input></td>
+          <th>DARK AT</th>
+          <td><input></td>
         </tr>
       </tfoot>
     </table>

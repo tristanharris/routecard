@@ -41,6 +41,9 @@
     });
     $('.route-card tfoot .leg-time').html(total);
     $('.route-card tfoot .total-time').html(total);
+    var plusten = parseInt(total/60);
+    $('.route-card tfoot .plus-ten').html(plusten * 10);
+    $('.route-card tfoot .full-total-time').html(total + plusten * 10);
   });
 
   new_row();
