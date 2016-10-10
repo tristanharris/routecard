@@ -4,6 +4,7 @@
   });
 
   var row = $('.route-card tbody tr').clone();
+  row.find('.grid-ref input').prop('placeholder', 'To');
 
   function new_row() {
     $('.route-card tbody').append(row.clone());
