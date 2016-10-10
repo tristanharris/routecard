@@ -33,11 +33,13 @@
 
   $('.route-card tbody').on('keyup', '.leg-time input', function(e) {
     var total = 0;
-    $('.route-card tbody .leg-time input').each(function() {
+    $('.route-card tbody .leg-time input:not(:hidden)').each(function() {
       var time = parseFloat($(this).val(), 10);
       if (!isNaN(time)) total += time;
+      $(this).closest('tr').find('.total-time').html(total);
     });
     $('.route-card tfoot .leg-time').html(total);
+    $('.route-card tfoot .total-time').html(total);
   });
 
   new_row();
