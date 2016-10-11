@@ -23,4 +23,8 @@ td input {
   .route-card tfoot th {
     background: grey; }
 
+#map {
+  height: 600px;
+  width: 800px; }
+
 /*# sourceMappingURL=styles.css.map */
