@@ -46,7 +46,7 @@
       </thead>
       <tbody>
         <tr>
-          <td class='grid-ref'><input type='text' name='card[grid_ref][]' required pattern='^[0-9]{3}\s+[0-9]{3}$' placeholder='Start'></td>
+          <td class='grid-ref'><input type='text' name='card[grid_ref][]' required pattern='^([A-Z][A-Z])?\s*[0-9]{3}\s+[0-9]{3}$' placeholder='Start' value='SU 580 320'></td>
           <td class='bearing'><input type='number' name='card[bearing][]' min=0 max=360 required></td>
           <td class='distance'><input type='number' name='card[distance][]' min=0 required></td>
           <td class='height-gained'><input type='number' name='card[height_gained][]' min=0></td>
@@ -91,12 +91,24 @@
           zoom: 8
         });
       }
+  function add_marker(gridref) {
+    var ll = grToLL(gridref);
+    var marker = new google.maps.Marker({
+      position: {lat: ll[1], lng: ll[0]},
+      map: map,
+      title: 'Hello World!'
+    });
+  }
+
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=APIKEY&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8VuKu-DoB4_S5Htmvldpybq4hW5wygls&callback=initMap"
     async defer></script>
 
     <script src='js/jquery-3.1.1.js'></script>
+    <script src='js/coordConvert.js'></script>
     <script src='js/script.js'></script>
 
   </body>
 </html>
+
+

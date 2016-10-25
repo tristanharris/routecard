@@ -30,7 +30,10 @@
   }
 
   $('.route-card').on('keyup', 'tr:last-child .grid-ref input', function(e) {
-    if (this.validity.valid) new_row();
+    if (this.validity.valid) {
+      new_row();
+      add_marker($(this).val());
+    }
   });
 
   $('.route-card tbody').on('keyup', '.distance input', function(e) {
